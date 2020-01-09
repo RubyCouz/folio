@@ -1,10 +1,6 @@
-<!--<p>
-    Bonjour <?= $prenom ?>
-</p>-->
-<?php
-?>
-<div class="">
-    <ul>
-            <li><?= 1 ?></li>
-    </ul>
+<div class="container white-text">
+<p>
+    Hello <?= $firstname . ' ' . $lastname . ' !!' ?>
+</p>
 </div>
+

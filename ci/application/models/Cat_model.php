@@ -8,7 +8,7 @@ if (!defined('BASEPATH')) exit('no direct scriptp access allowed');
  * Affichage de la liste des catégories
  * @author ced27
  */
-class categoriesModel extends CI_model {
+class Cat_model extends CI_model {
 
     /**
      * Affichage de la liste des catégories

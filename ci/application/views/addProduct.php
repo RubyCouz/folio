@@ -1,167 +1,186 @@
 
-<div class="uk-container">
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <div class="card light-green lighten-5">
+                <div class="card-content">
+                    <span class="card-title">Ajout d'un produit</span>
+                    <?= form_open_multipart() ?>
+                    <div class="row">
+                        <div class="col s6" id="prev">
+                            <img src="" alt="image" title="preview de l'image du produit" class="pic2">
+                        </div>
+                        <div class="col s6">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select name="pro_cat_id" id="categories">
+                                        <option value="" disabled selected>Choisissez une catégorie</option>
+                                        <?php
+                                        foreach ($categoriesList as $cat)
+                                        {
+                                            ?>
+                                            <option value="<?= $cat->cat_id ?>" <?= set_value('pro_cat_id') == $cat->cat_id ? 'selected' : '' ?>><?= $cat->cat_nom ?></option>
+                                            <?php
+                                        }
+                                        ?>
+                                    </select>
+                                    <label for="categories">Catégorie</label>
+                                    <?php
+                                    if (form_error('pro_cat_id') != NULL)
+                                    {
+                                        ?>
+                                        <span class="new badge"><?= form_error('pro_cat_id') ?></span>
+                                        <?php
+                                    }
+                                    ?>
 
-    <?php echo validation_errors(); ?>
-
-    <?php // echo form_open_multipart();   ?>
-
-    <form action="" method="POST" enctype="multipart/form-data">
-
-        <div class="uk-alert-danger">
-            <!-- <?= $error ?> -->
-        </div>
-        <fieldset class="uk-fieldset">
-            <legend class="uk-legend">Ajouter un produit</legend>
-
-            <div class="uk-child-width-1-2 uk-text-center" uk-grid>
-                <div>
-                    <div class="uk-card uk-card-default uk-card-body">
-                        <img src="" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="addRef" type="text" name="pro_ref" class="" value="<?= set_value('pro_ref') != NULL ? set_value('pro_ref') : '' ?>">
+                                    <label for="addRef">Référence</label>
+                                    <span class="error" id="errorRef"></span>
+                                    <?php
+                                    if (form_error('pro_ref') != NULL)
+                                    {
+                                        ?>
+                                        <span class="new badge"><?= form_error('pro_ref') ?></span>
+                                        <?php
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="addLabel" type="text" name="pro_libelle" class="" value="<?= set_value('pro_libelle') != NULL ? set_value('pro_libelle') : '' ?>">
+                                    <label for="addLabel">Libellé</label>
+                                    <span class="error" id="errorLabel"></span>
+                                    <?php
+                                    if (form_error('pro_libelle') != NULL)
+                                    {
+                                        ?>
+                                        <span class="new badge"><?= form_error('pro_libelle') ?></span>
+                                        <?php
+                                    }
+                                    ?>
+                                </div>
+                            </div>                                                    
+                        </div>
                     </div>
-                </div>
-                <div>
-
-                    <div class="uk-margin">
-                        <label for="categories"></label>
-                        <select class="uk-select" id="categories" name="pro_cat_id">
-                            <option disabled selected>Choisissez une catégorie</option>
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="addColor" type="text" name="pro_couleur" class="" value="<?= set_value('pro_couleur') != NULL ? set_value('pro_couleur') : '' ?>">
+                            <label for="addColor">Couleur</label>
+                            <span class="error" id="errorColor"></span>
                             <?php
-                            foreach ($categoriesList as $row)
+                            if (form_error('pro_couleur') != NULL)
                             {
                                 ?>
-                                <option value="<?= $row->cat_id ?>" <?= isset($_POST['pro_cat_id']) ? 'selected' : '' ?>><?= $row->cat_nom ?></option>
+                                <span class="new badge"><?= form_error('pro_couleur') ?></span>
                                 <?php
                             }
                             ?>
-                        </select>    
-                        <?php
-                        if (form_error('pro_cat_id') != NULL)
-                        {
-                            ?>
-                            <div class="uk-alert-danger" uk-alert>
-                                <a class="uk-alert-close" uk-close></a>
-                                <p><?= form_error('pro_cat_id') ?></p>
+                        </div>
+                        <div class="col s6">
+                            <div class="input-field">
+                                <input id="addStock" type="text" name="pro_stock" class="" value="<?= set_value('pro_stock') != NULL ? set_value('pro_stock') : '' ?>">
+                                <label for="addStock">Stock</label>
+                                <span class="error" id="errorStock"></span>
+                                <?php
+                                if (form_error('pro_stock') != NULL)
+                                {
+                                    ?>
+                                    <span class="new badge"><?= form_error('pro_stock') ?></span>
+                                    <?php
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </div>    
+                    <div class="row">
+                        <div class="col s6">
+                            <div class="input-field">
+                                <input id="addPrice" type="text" name="pro_prix" class="" value="<?= set_value('pro_prix') != NULL ? set_value('pro_prix') : '' ?>">
+                                <label for="addPrice">Prix</label>
+                                <span class="error" id="errorPrice"></span>
+                                <?php
+                                if (form_error('pro_prix') != NULL)
+                                {
+                                    ?>
+                                    <span class="new badge"><?= form_error('pro_prix') ?></span>
+                                    <?php
+                                }
+                                ?>
+                            </div>
+                        </div>
+                        <div class="col s6">
+                            <div class="file-field input-field">
+                                <div class="btn">
+                                    <span>Insérer une photo</span>
+                                    <input type="file" name="pro_photo" id="upload">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text" id="addFile">
+                                </div>
+                                <span class="info">Au format .gif, .jpg, .jpeg, .pjpeg ou .png</span>
+                                <span class="error" id="errorFile"></span>
                             </div>
                             <?php
-                        }
-                        ?>
-                    </div>
-                    <div class="uk-margin">
-                        <label class="uk-form-label" for="ref">Référence</label>
-                        <div class="uk-form-controls">
-                            <input class="uk-input" id="ref" type="text" name="pro_ref" placeholder="Indiquez une référence" value="<?= set_value('pro_ref') ?>" />
-                        </div>
-                        <?php
-                        if (form_error('pro_ref') != NULL)
-                        {
+                            if (isset($error) && $error != '')
+                            {
+                                ?>
+                                <span class="new badge"><?= $error ?></span>
+                                <?php
+                            }
                             ?>
-                            <div class="uk-alert-danger" uk-alert>
-                                <a class="uk-alert-close" uk-close></a>
-                                <p><?= form_error('pro_ref') ?></p>
-                            </div>
-                            <?php
-                        }
-                        ?>
-                    </div>
-                    <div class="uk-margin">
-                        <label class="uk-form-label" for="color">Couleur</label>
-                        <div class="uk-form-controls">
-                            <input class="uk-input" id="color" type="text" name="pro_couleur" placeholder="Indiquez une couleur" value="<?= set_value('pro_couleur') ?>" />
-                        </div>
-                        <?php
-                        if (form_error('pro_couleur') != NULL)
-                        {
-                            ?>
-                            <div class="uk-alert-danger" uk-alert>
-                                <a class="uk-alert-close" uk-close></a>
-                                <p><?= form_error('pro_couleur') ?></p>
-                            </div>
-                            <?php
-                        }
-                        ?>
-                    </div>
-                    <div class="uk-margin">
-                        <label class="uk-form-label" for="label">Libellé</label> 
-                        <div class="uk-form-controls">
-                            <input class="uk-input" id="label" type="text" name="pro_libelle" placeholder="Libellé" value="<?= set_value('pro_libelle') ?>" />
-                        </div>
-                        <?php
-                        if (form_error('pro_libelle') != NULL)
-                        {
-                            ?>
-                            <div class="uk-alert-danger" uk-alert>
-                                <a class="uk-alert-close" uk-close></a>
-                                <p><?= form_error('pro_libelle') ?></p>
-                            </div>
-                            <?php
-                        }
-                        ?>
-                    </div>
-                    <div class="uk-margin">
-                        <label class="uk-form-label" for="price">Prix</label>
-                        <div class="uk-form-controls">
-                            <input class="uk-input" id="price" type="text" name="pro_prix" placeholder="Prix" value="<?= set_value('pro_prix') ?>" />
-                        </div>
-                        <?php
-                        if (form_error('pro_prix') != NULL)
-                        {
-                            ?>
-                            <div class="uk-alert-danger" uk-alert>
-                                <a class="uk-alert-close" uk-close></a>
-                                <p><?= form_error('pro_prix') ?></p>
-                            </div>
-                            <?php
-                        }
-                        ?>
-                    </div>
-                    <div class="uk-margin">
-                        <label class="uk-form-label" for="stock">Stock</label>
-                        <div class="uk-form-controls">
-                            <input class="uk-input" id="stock" type="text" name="pro_stock" placeholder="Quantité en stock" value="<?= set_value('pro_stock') ?>" />
-                        </div>
-                        <?php
-                        if (form_error('pro_stock') != NULL)
-                        {
-                            ?>
-                            <div class="uk-alert-danger" uk-alert>
-                                <a class="uk-alert-close" uk-close></a>
-                                <p><?= form_error('pro_stock') ?></p>
-                            </div>
-                            <?php
-                        }
-                        ?>
-                    </div>
-                    <div class="uk-margin">
-                        <div uk-form-custom="target: true">
-                            <input type="file" name="pro_photo" >
-                            <input class="uk-input uk-form-width-medium" type="text" placeholder="Insérez une image" disabled>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="input-field">
+                                <textarea id="addDescription" class="materialize-textarea" name="pro_description"><?= set_value('pro_description') != NULL ? set_value('pro_description') : '' ?></textarea>
+                                <label for="addDescription">Description</label>
+                                <span class="error" id="errorDesc"></span>
+                                <?php
+                                if (form_error('pro_description') != NULL)
+                                {
+                                    ?>
+                                    <span class="new badge"><?= form_error('pro_description') ?></span>
+                                    <?php
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row valign-wrapper left-align">
+                        <div class="col s2 radio">
+                            <p>Produit bloqué :</p>
+                        </div>
+                        <div class="col s1 radio">
+                            <label>
+                                <input name="pro_bloque" type="radio" value="1" <?= set_value('pro_bloque') == 1 ? 'checked' : '' ?>>
+                                <span>Oui</span>
+                            </label>
+                        </div>
+                        <div class="col s1 radio">
+                            <label>
+                                <input name="pro_bloque" type="radio" value="2" <?= set_value('pro_bloque') == 2 ? 'checked' : '' ?>>
+                                <span>Non</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s6 center-align">
+                            <input type="submit" value="Ajouter le produit" class="waves-effect waves-light btn">
+                        </div>
+                        <div class="col s6 center-align">
+                            <a href="<?= site_url('Produits/home_user') ?>" title="Lien vers le catalogue" class="waves-effect waves-light btn cyan accent-4">Retour au catalogue</a>
+                        </div>
+                    </div>
+                    </form>  
                 </div>
             </div>
-
-            <div class="uk-margin">
-                <label class="uk-form-label" for="description">Description</label>
-                <textarea class="uk-textarea" rows="5" id="description" placeholder="Description" name="pro_description" ><?= set_value('pro_description') ?></textarea>
-                <?php
-                if (form_error('pro_description') != NULL)
-                {
-                    ?>
-                    <div class="uk-alert-danger" uk-alert>
-                        <a class="uk-alert-close" uk-close></a>
-                        <p><?= form_error('pro_description') ?></p>
-                    </div>
-                    <?php
-                }
-                ?>
-            </div>
-            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-                <label>Produit bloqué :</label>
-                <label><input class="uk-radio" type="radio" name="pro_bloque" value="1" <?= isset($_POST['pro_ref']) ? 'checked' : '' ?>> Oui</label>
-                <label><input class="uk-radio" type="radio" name="pro_bloque" value="2" <?= isset($_POST['pro_ref']) ? 'checked' : '' ?>> Non</label>
-            </div>
-        </fieldset>
-        <input type="submit" value="Ajouter le produit" class="uk-button uk-button-secondary" />
-    </form>
-    <hr class="uk-divider-icon" />
+        </div>
+    </div>
 </div> 

@@ -1,0 +1,178 @@
+body {
+    background: #373d34;
+}
+.logo {
+    width: 25%;
+    height: auto;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+.collapsible-body {
+    background: #fff
+}
+nav {
+    background: rgba(0,0,0,0.2);
+    transition-property: background;
+    transition-duration: 0.3s;
+}
+
+h1 {
+    color: #fff;
+}
+.error {
+    color: red;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.btn {
+    background-color: #297a20;
+}
+a.btn:hover {
+    background: #64ad5c;
+}
+.dropdown-content li > a {
+    color: #373d34;
+}
+
+h2 {
+    font-size : 20px;
+}
+.boucle {
+    width: 12.5%!important;
+}
+.table {
+    background: #e2e8df;
+}
+.number {
+    font-weight: bold;
+}
+.exo {
+    color: #e2e8df;
+}
+.cancel {
+    background: #d50000 ;
+}
+.cancel:hover {
+    background: #c62828!important;
+}
+.pdo {
+    width: 20%!important;
+}
+.pic {
+    max-width: 100%;
+    max-height: 200px;
+}
+/**
+*dimension card
+*/
+.card-image {
+    height: 200px;
+}
+.cardClient {
+    height: 90px!important;
+}
+.card-action {
+    height: 70px;
+}
+.pic2 {
+    width: 100%!important;
+    height: auto!important;
+}
+.radio {
+    margin-left: 0!important;
+}
+.info {
+    font-size: 0.8em;
+    font-style: italic;
+}
+.table {
+    border: 1px black solid;
+}
+span.badge.new {
+    background: #b71c1c; 
+}
+.modal {
+    width: 30%;
+    height: 250px;
+}
+.error {
+    font-size: 0.7em;
+    color: #F44336;
+}
+
+/* modal */
+.modal {
+    height: 435px;
+}
+
+.cart {
+    color: black; 
+}
+
+.dropdown-content {
+    width: 800px;
+    max-height: 400px;
+    min-height: 50px;
+}
+.del {
+    margin-top: 25px;
+}
+.tiny {
+    font-size: 1rem!important;
+}
+button.waves-effect.waves-light.btn.tiny.material-icons {
+    height: 25px;
+}
+div.col.s12.modify {
+    height: 25px;
+}
+.pagination li a {
+    color: white;
+    width: 30px;
+}
+.pagination li.active {
+    width: 30px;
+    background: rgb(226, 155, 31);
+}
+.dropdown_user {
+    width: 200px;
+}
+
+/*img.circle.responsive-img{
+    width: 70px;
+    height: 50px;
+}*/
+
+.profile_pic {
+    border-radius: 20px 20px 20px 20px!important;
+}
+.profile {
+    width:60px;
+    height: 60px;
+}
+.tiny_pic {
+    width: 60px;
+    height: auto;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+.info_user {
+    height: 710px;
+}
+.card {
+    border-radius: 20px 20px 20px 20px!important;
+}
+.modal_sup {
+    height: 260px;
+    border-radius: 20px 20px 20px 20px;
+}
+.del-confirm {
+    color: red;    
+}
+.update {
+    color: #297a20;
+}
+.pic_profil {
+    width: 80px;
+    height: 80px;
+}

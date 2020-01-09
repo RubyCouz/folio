@@ -9,22 +9,36 @@ if (!defined('BASEPATH'))
  * Affichage de la liste des produits
  * @author ced27
  */
-class produitModel extends CI_model {
+class Prod_model extends CI_model {
 
     /**
      * Affichage de la liste des produits
      */
-    public function liste()
+    public function liste($page, $limit)
     {
         //appel de la methode database -> permet la connexion à la base de données.
         $this->load->database();
-        // stockage de la requète dans une variable
-        $query = 'SELECT * from `produits`';
+        // requète select
+        $this->db->select('*, DATE_FORMAT(`pro_d_ajout`, \'%d/%m/%Y\') as add_date, DATE_FORMAT(`pro_d_modif`, \'%d/%m/%Y\') as update_date ');
+        $this->db->from('produits');
+        $this->db->limit($limit, $page);
         // exécution de la requète
-        $result = $this->db->query($query);
+        $result = $this->db->get();
         // récupération des résultats
         $productList = $result->result();
         return $productList;
+    }
+
+    /**
+     * Compte du nombre d'entrées dans la table produits
+     * @return type
+     */
+    public function count_items()
+    {
+        $query = 'SELECT COUNT(*) as nb FROM `produits`';
+        $result = $this->db->query($query);
+        $count_item = $result->row();
+        return $count_item->nb;
     }
 
     /**
@@ -48,20 +62,18 @@ class produitModel extends CI_model {
     /**
      * Modification d'un produit
      */
-    public function update()
+    public function update($id)
     {
-        // chargement/connexion à la BDD
-        $this->load->database();
+
         $file = $this->upload->data();
-        $id = $this->input->post('pro_id');
         $data = $this->input->post();
 // récupération de l'extensio du fichier en vue de son insertion en base de données et extraction du '.' (codeigniter garde le point avant l'extension)
-        if ($this->upload->do_upload("pro_photo"))
+        if ($this->upload->do_upload('pro_photo'))
         {
-            $data["pro_photo"] = substr($file["file_ext"], 1);
+            $data['pro_photo'] = substr($file['file_ext'], 1);
         }
         // récupération et formatage de la date (date courante) d'ajout du produit
-        $data["pro_d_modif"] = date("Y-m-d");
+        $data['pro_d_modif'] = date("Y-m-d");
         $this->db->where('pro_id', $id);
         $this->db->update('produits', $data);
     }
@@ -69,11 +81,10 @@ class produitModel extends CI_model {
     /**
      * Affichage d'un produit selon son id
      */
-    public function productById()
+    public function productById($id)
     {
         // chargement/connexion à la BDD
         $this->load->database();
-        $id = $this->input->get('pro_id');
         // stockage de la requète pour afficher un produit dans une variable
         $query = 'SELECT * FROM `produits` WHERE `pro_id` = ?';
         // lancement de la requète
@@ -85,17 +96,14 @@ class produitModel extends CI_model {
     /**
      * Suppression d'un produit
      */
-    public function delete()
+    public function delete($id)
     {
         // chargement de la base de données
         $this->load->database();
-        // récupération de l'id
-        $id = $this->input->post('pro_id');
         // clause pour exécuter la requète selon l'id du produit
         $this->db->where('pro_id', $id);
         // exécution de la requète
         $this->db->delete('produits');
-        
     }
 
 }
