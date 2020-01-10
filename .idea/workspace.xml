@@ -2,45 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de35e7d3-5f57-4673-9560-4f42898cf2b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/devAmorce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/devAmorce.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Cédric_Cousin_Ruby.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Cédric_Cousin_Ruby.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ci/application/config/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/ci/application/config/autoload.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/application/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/ci/application/config/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/ci/application/config/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/application/controllers/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/ci/application/controllers/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ci/application/controllers/Exocontroller.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/application/controllers/Produits.php" beforeDir="false" afterPath="$PROJECT_DIR$/ci/application/controllers/Produits.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/application/models/User_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/ci/application/models/User_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ci/application/models/categoriesModel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ci/application/models/produitModel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ci/application/views/addProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/ci/application/views/addProduct.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/application/views/cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/ci/application/views/cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ci/application/views/exo.php" beforeDir="false" afterPath="$PROJECT_DIR$/ci/application/views/exo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/application/views/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/ci/application/views/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/ci/application/views/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/application/views/home_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/ci/application/views/home_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ci/application/views/liste.php" beforeDir="false" afterPath="$PROJECT_DIR$/ci/application/views/liste.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/application/views/log.php" beforeDir="false" afterPath="$PROJECT_DIR$/ci/application/views/log.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/application/views/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/ci/application/views/signin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ci/application/views/updateProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/ci/application/views/updateProduct.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/application/views/user_info.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/ci/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ci/assets/css/uikit.min.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/assets/img/11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ci/assets/img/11.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/assets/img/14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ci/assets/img/14.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/assets/img/16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ci/assets/img/16.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/assets/img/20.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ci/assets/img/20.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/assets/img/51.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ci/assets/img/51.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/assets/img/7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ci/assets/img/7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ci/assets/img/8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/ci/assets/img/8.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/ci/assets/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ci/assets/js/uikit.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/assets/js/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/ci/assets/js/upload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ci/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ci/nbproject/private/private.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ci/nbproject/private/private.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/correction" beforeDir="false" afterPath="$PROJECT_DIR$/correction" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/correction/controler/allProductControler.php" beforeDir="false" afterPath="$PROJECT_DIR$/correction/controler/allProductControler.php" afterDir="false" />
@@ -121,6 +109,7 @@
       <updated>1578558789425</updated>
       <workItem from="1578558792339" duration="619000" />
       <workItem from="1578566427663" duration="10553000" />
+      <workItem from="1578641608639" duration="11627000" />
     </task>
     <servers />
   </component>

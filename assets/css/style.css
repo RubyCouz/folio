@@ -1,3 +1,6 @@
+/**
+CSS accueil
+ */
 body {
     background-color: #373C35;
 }
@@ -7,4 +10,20 @@ body {
 .footer {
     padding-top: 45px;
     padding-bottom: 50px;
+}
+h2.description {
+    color: #0b0b0b;
+}
+.description {
+    color: #0b0b0b;
+}
+/**
+CSS navbar
+ */
+.uk-section-primary {
+    background-color: #942a25;
+}
+.logo {
+    width: 90px;
+    height: auto;
 }

@@ -2,24 +2,53 @@
   <dictionary name="Cédric Cousin-Ruby">
     <words>
       <w>accueil</w>
+      <w>administrateur</w>
       <w>affichage</w>
       <w>afpa</w>
+      <w>ajouter</w>
+      <w>annuler</w>
       <w>avec</w>
       <w>codeigniter</w>
+      <w>connecter</w>
+      <w>déconnecter</w>
+      <w>démo</w>
       <w>démos</w>
       <w>exercices</w>
+      <w>firstname</w>
+      <w>formulaire</w>
+      <w>gestion</w>
       <w>getb</w>
       <w>hppc</w>
       <w>icône</w>
+      <w>igniter</w>
+      <w>informations</w>
+      <w>inscrit</w>
       <w>jsdelivr</w>
       <w>kenburns</w>
+      <w>lastname</w>
       <w>linkedin</w>
+      <w>liste</w>
+      <w>navbar</w>
+      <w>numérique</w>
+      <w>panier</w>
+      <w>produit</w>
       <w>produits</w>
       <w>profil</w>
+      <w>projet</w>
+      <w>prénom</w>
+      <w>signin</w>
       <w>slideshow</w>
       <w>tkaix</w>
       <w>uikit</w>
+      <w>userdata</w>
+      <w>userform</w>
+      <w>utilisateurs</w>
+      <w>vais</w>
+      <w>venez</w>
+      <w>verif</w>
       <w>vers</w>
+      <w>vous</w>
+      <w>vérification</w>
     </words>
   </dictionary>
 </component>

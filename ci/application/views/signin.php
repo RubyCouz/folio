@@ -3,13 +3,10 @@
     <div class="row">
         <div class="col s12">
             <h1>Formulaire d'inscription</h1>
-            <?= form_open_multipart('Client/check_userform');
-            ?>
             <div class="row">
                 <div class="input-field col s6">
-                    <input id="firstname" type="text" name="firstname_user" class="white-text" value="<?= set_value('firstname_user') != NULL ? set_value('firstname_user') : '' ?>">
-                    <label for="firstname" >Prénom :</label>  
-                    <span id="missingFirstname" class="error"><?= form_error('firstname_user') != null ? form_error('firstname_user') : '' ?></span>
+                    <input id="firstname" type="text"  class="white-text" >
+                    <label for="firstname" ></label>
                 </div>
                 <div class="input-field col s6">
                     <input id="lastname" type="text" class="white-text" name="lastname_user" value="<?= set_value('lastname_user') != NULL ? set_value('lastname_user') : '' ?>">
@@ -43,7 +40,6 @@
             </div>
             <div class="row">
                 <div class="col s12 center-align">
-                    <span id="errorPassword" class="error"><?= form_error('passwordVerif_user') != null ? form_error('passwordVerif_user') : '' ?></span>
                 </div>
             </div>
             <div class="row">

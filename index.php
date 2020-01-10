@@ -13,23 +13,27 @@
         <ul class="uk-slideshow-items">
             <li>
                 <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
-                    <img src="assets/img/accueil/correction.jpg" alt="Corrections"
-                         title="Screenshot accueil des corrections"
-                         uk-cover>
-                    <div class="uk-position-center uk-position-small uk-text-center">
-                        <h2 uk-slideshow-parallax="y: -50,0,0">Corrections des exercices AFPA</h2>
-                        <p uk-slideshow-parallax="y: 50,0,0">HTML, CSS, JS, PHP, Codeigniter, Jquery, AJAX, Vue.js</p>
-                        <p uk-slideshow-parallax="x: 200,-200">Correction avec explications et démos</p>
-                    </div>
+<!--                    <a href="correction/index.php">-->
+                        <img src="assets/img/accueil/correction.jpg" alt="Corrections"
+                             title="Screenshot accueil des corrections"
+                             uk-cover>
+<!--                    </a>-->
+                </div>
+                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                    <h3 class="uk-margin-remove">Corrections des exercices AFPA</h3>
+                    <p class="uk-margin-remove">HTML, CSS, JS, PHP, Codeigniter, Jquery, AJAX, Vue.js</p>
+                    <p class="uk-margin-remove">Correction avec explications et démos</p>
+                    <a href="correction/index.php" class="uk-icon-link" uk-icon="icon: forward; ratio: 2" title="Lien vers les correction AFPA" target="_blank"></a>
                 </div>
             </li>
             <li>
                 <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-top-right">
-                    <img src="assets/img/icons/1366979294_85989.jpg" alt="" uk-cover>
-                    <div class="uk-position-center uk-position-small uk-text-center">
-                        <h2 uk-slideshow-parallax="x: 100,-100">Heading</h2>
-                        <p uk-slideshow-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
-                    </div>
+                    <img src="assets/img/accueil/ci.jpg" alt="" uk-cover>
+                </div>
+                <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                    <h3 class="uk-margin-remove">Démo projet E-commerce avec CodeIgniter</h3>
+                    <p class="uk-margin-remove">Utilisation de CodeIgniter, gestion du panier avec AJAX, identification , interface client et administrateur</p>
+                    <a href="ci/index.php" class="uk-icon-link" uk-icon="icon: forward; ratio: 2" title="Lien vers les correction AFPA" target="_blank"></a>
                 </div>
             </li>
             <li>
@@ -79,19 +83,19 @@
     <nav class="footer">
         <div class="uk-child-width-expand@s uk-text-center" uk-grid>
             <div>
-                <a href="">
+                <a href="https://github.com/rubycouzcedric" title="Lien vers mon github" target="_blank">
                     <img src="assets/img/icons/icons8-github-64.png" alt="Icône github"
                          title="Lien vers mon repo Github">
                 </a>
             </div>
             <div>
-                <a href="">
+                <a href="https://rubycouzcedric.github.io/" title="Lien vers mon C.V numérique" target="_blank">
                     <img src="assets/img/icons/icons8-resume-64.png" alt="Icône C.V" title="Lien vers mon C.V">
                 </a>
             </div>
             <div>
-                <a href="">
-                    <img src="assets/img/icons/icons8-linkedin-64.png" alt="Icôn LinkedIn"
+                <a href="https://www.linkedin.com/in/cedric-cousin-359307124/" title="Lien vers mon profil LinkedIn" target="_blank">
+                    <img src="assets/img/icons/icons8-linkedin-64.png" alt="Icône LinkedIn"
                          title="Lien vers mon profil LinkedIn">
                 </a>
             </div>
