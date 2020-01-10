@@ -3,53 +3,59 @@
     if ($this->session->userdata('role') != 1) {
         ?>
         <h1>Nos produits</h1>
-        <div class="uk-width-1-3@m uk-text-center uk-flex-center" uk-grid>
+
+
+        <div class="uk-child-width-1-2@m uk-text-center" uk-grid>
             <?php
             foreach ($productList as $element) {
                 ?>
-                <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
-                    <div class="uk-card-media-left uk-cover-container">
-                        <img src="<?= base_url('assets/img/' . $element->pro_id . '.' . $element->pro_photo) ?>"
-                             alt="Photo d'illustration" title="Photo de <?= $element->pro_libelle ?>" uk-cover>
-                        <canvas width="600" height="400"></canvas>
-                    </div>
-                    <div>
-                        <div class="uk-card-body">
-                            <h3 class="uk-card-title"><?= $element->pro_libelle ?></h3>
-                            <p><?= $element->pro_description ?></p>
-                            <p><?= $element->pro_prix ?> €</p>
-                            <?php echo form_open(); ?>
-                            <input type="hidden" name="pro_qte" id="pro_qte<?= $element->pro_id ?>" value="1">
-                            <input type="hidden" name="pro_prix" id="pro_prix<?= $element->pro_id ?>"
-                                   value="<?= $element->pro_prix ?>">
-                            <input type="hidden" name="pro_id" id="pro_id<?= $element->pro_id ?>"
-                                   value="<?= $element->pro_id ?>">
-                            <input type="hidden" name="pro_libelle" id="pro_libelle<?= $element->pro_id ?>"
-                                   value="<?= $element->pro_libelle ?>">
-                            <input type="hidden" name="pro_photo" id="pro_photo<?= $element->pro_id ?>"
-                                   value="<?= $element->pro_photo ?>">
-                            <div class="right-align">
-                                <button class="uk-icon-button" uk-icon="cart" type="button"
-                                        value="<?= $element->pro_id ?>">
-                                    <span></span>
+                <div class="uk-grid-small">
+                    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin cardMargin"
+                         uk-grid>
+                        <div class="uk-card-media-left uk-cover-container">
+                            <img src="<?= base_url('assets/img/' . $element->pro_id . '.' . $element->pro_photo) ?>"
+                                 alt="Photo d'illustration" title="Photo de <?= $element->pro_libelle ?>" uk-cover
+                                 class="pic">
+                            <canvas width="600" height="400"></canvas>
+                        </div>
+                        <div class="card">
+                            <div class="uk-card-body">
+                                <h3 class="uk-card-title"><?= $element->pro_libelle ?></h3>
+                                <p class="uk-text-truncate"><?= $element->pro_description ?></p>
+                                <p><?= $element->pro_prix ?> €</p>
+                                <?php echo form_open(); ?>
+                                <input type="hidden" name="pro_qte" id="pro_qte<?= $element->pro_id ?>" value="1">
+                                <input type="hidden" name="pro_prix" id="pro_prix<?= $element->pro_id ?>"
+                                       value="<?= $element->pro_prix ?>">
+                                <input type="hidden" name="pro_id" id="pro_id<?= $element->pro_id ?>"
+                                       value="<?= $element->pro_id ?>">
+                                <input type="hidden" name="pro_libelle" id="pro_libelle<?= $element->pro_id ?>"
+                                       value="<?= $element->pro_libelle ?>">
+                                <input type="hidden" name="pro_photo" id="pro_photo<?= $element->pro_id ?>"
+                                       value="<?= $element->pro_photo ?>">
+                                <div class="right-align">
+                                    <button class="uk-icon-button" uk-icon="cart" type="button"
+                                            value="<?= $element->pro_id ?>">
+                                        <span></span>
 
-                                </button>
+                                    </button>
 
+                                </div>
+                                <?= form_close() ?>
                             </div>
-                            <?= form_close() ?>
                         </div>
                     </div>
                 </div>
+
                 <?php
             }
             ?>
         </div>
-        <div class="row">
-            <div class="col s12 center-align">
+        <div class="pagination">
+            <ul class="uk-pagination uk-flex-center" uk-margin>
                 <!-- pagination -->
-
                 <?php echo $this->pagination->create_links(); ?>
-            </div>
+            </ul>
         </div>
         <?php
     } else {
@@ -102,12 +108,13 @@
             ?>
             </tbody>
         </table>
-        <div class="row">
-            <div class="col s12 center-align">
+        <div class="pagination">
+            <ul class="uk-pagination uk-flex-center" uk-margin>
                 <!-- pagination -->
                 <?php echo $this->pagination->create_links(); ?>
-            </div>
+            </ul>
         </div>
+
         <div class="row">
             <div class="col s12">
                 <a href="<?= site_url('Produits/addProduct') ?>" class="waves-effect waves-light btn"

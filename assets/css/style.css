@@ -27,3 +27,28 @@ CSS navbar
     width: 90px;
     height: auto;
 }
+/**
+CSS card client
+ */
+.cardMargin {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.pic {
+    width: 100%!important;
+    height: auto!important;
+}
+.detail {
+    height: 200px;
+}
+.card {
+    height: 260px;
+}
+
+/**
+CCS pagination
+ */
+
+.pagination {
+    margin-top: 30px;
+}

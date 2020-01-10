@@ -54,13 +54,13 @@ class Produits extends CI_Controller
         $listView['productList'] = $productList;
 
         // formatage de la pagination
-        $config['base_url'] = 'http://localhost/ci/index.php/Produits/index';
+        $config['base_url'] = 'http://localhost/devAmorce/ci/index.php/Produits/index';
         $config['total_rows'] = $count_item;
         $config['per_page'] = $limit;
         $config['num_links'] = 5;
-        $config['cur_tag_open'] = ' <li class="active">';
+        $config['cur_tag_open'] = ' <li class="uk-active">';
         $config['cur_tag_close'] = '</li>';
-        $config['full_tag_open'] = '<ul class="pagination">';
+        $config['full_tag_open'] = '<ul class="uk-pagination">';
         $config['full_tag_close'] = '</ul>';
         $config['first_link'] = FALSE;
         $config['first_tag_open'] = FALSE;
@@ -68,13 +68,13 @@ class Produits extends CI_Controller
         $config['last_link'] = FALSE;
         $config['last_tag_open'] = FALSE;
         $config['last_tag_close'] = FALSE;
-        $config['next_link'] = '<i class="material-icons">chevron_right</i>';
-        $config['next_tag_open'] = '<li class="waves-effect white-text">';
+        $config['next_link'] = '<span uk-pagination-next></span>';
+        $config['next_tag_open'] = '<li>';
         $config['next_tag_close'] = '</li>';
-        $config['prev_link'] = '<i class="material-icons">chevron_left</i>';
-        $config['prev_tag_open'] = '<li class="waves-effect white-text">';
+        $config['prev_link'] = '<span uk-pagination-previous></span>';
+        $config['prev_tag_open'] = '<li>';
         $config['prev_tag_close'] = '</li>';
-        $config['num_tag_open'] = ' <li class="waves-effect white-text">';
+        $config['num_tag_open'] = ' <li>';
         $config['num_tag_close'] = '</li>';
         $this->pagination->initialize($config);
 // chargemnt des vues
