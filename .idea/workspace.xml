@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de35e7d3-5f57-4673-9560-4f42898cf2b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Cédric_Cousin_Ruby.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Cédric_Cousin_Ruby.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ci/application/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/ci/application/config/config.php" afterDir="false" />
@@ -61,7 +61,7 @@
     </execution>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/ci" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1W9PMXrOhrnThvFsJTb2nxhMjGh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -106,7 +106,8 @@
       <workItem from="1578558792339" duration="619000" />
       <workItem from="1578566427663" duration="10553000" />
       <workItem from="1578641608639" duration="11627000" />
-      <workItem from="1578682573496" duration="6977000" />
+      <workItem from="1578682573496" duration="7201000" />
+      <workItem from="1578901432064" duration="5046000" />
     </task>
     <servers />
   </component>

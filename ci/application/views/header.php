@@ -47,24 +47,28 @@ $form_attributes = array('class' => 'uk-form-horizontal');
                         if ($this->session->userdata('id') !== null) {
                             ?>
                             <li>
+                                <img src="<?= base_url('assets/img/profil_pic/' . $this->session->userdata('id') . '.' . $this->session->userdata('extension')) ?>"
+                                     title="photo de profil de <?= $this->session->userdata('login') ?>"
+                                     alt="photo de profil"
+                                     class="uk-border-circle thumbnail">
                                 <div class="uk-navbar-dropdown"
                                      uk-dropdown="animation: uk-animation-slide-top-small; duration: 1000">
-                                    <img src="<?= base_url('assets/img/profil_pic/' . $this->session->userdata('id') . '.' . $this->session->userdata('extension')) ?>"
-                                         title="photo de profil de <?= $this->session->userdata('login') ?>"
-                                         alt="photo de profil"
-                                         class="tiny_pic">
+
                                     <ul class="uk-nav uk-navbar-dropdown-nav">
                                         <?php
                                         if ($this->session->userdata('role') == 1) {
                                             //dropdown menu admin
                                             ?>
                                             <li><a href="<?= site_url('Produits/index') ?>">Liste des produits</a></li>
-                                            <li><a href="<?= site_url('Produits/addProduct') ?>">Ajouter un produit</a>
+                                            <li>
+                                                <a href="<?= site_url('Produits/addProduct') ?>">Ajouter un produit</a>
                                             </li>
                                             <li><a href="<?= site_url('Client/list_user') ?>">Liste des utilisateurs</a>
                                             </li>
-                                            <li><a href="<?= site_url('Client/check_userform') ?>">Ajouter un
-                                                    utilisateurs</a></li>
+                                            <li>
+                                                <a href="<?= site_url('Client/check_userform') ?>">Ajouter un
+                                                    utilisateurs</a>
+                                            </li>
                                             <li class="divider" tabindex="-1"></li>
                                             <li>
                                                 <a href="<?= site_url('Client/update_profil/' . $this->session->userdata('id')) ?>">Mon
@@ -131,31 +135,33 @@ $form_attributes = array('class' => 'uk-form-horizontal');
         echo form_open('Client/user_check');
         ?>
         <div class="uk-modal-body">
-            <div class="uk-margin">
-                <div class="uk-inline">
-                    <span class="uk-form-icon" uk-icon="icon: user"></span>
-                    <label for="login_user"></label>
-                    <input class="uk-input" id="login_user" type="text" name="login_user"
-                           value="<?= set_value('login_user') != NULL ? set_value('login_user') : '' ?>">
-                    <span id="missingLogin"
-                          class="error"><?= form_error('login_user') != null ? form_error('login_user') : '' ?></span>
+            <div class="uk-align-center connection-align">
+                <div class="uk-margin">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon" uk-icon="icon: user"></span>
+                        <label for="login_user"></label>
+                        <input class="uk-input" id="login_user" type="text" name="login_user"
+                               value="<?= set_value('login_user') != NULL ? set_value('login_user') : '' ?>">
+                        <span id="missingLogin"
+                              class="error"><?= form_error('login_user') != null ? form_error('login_user') : '' ?></span>
+                    </div>
                 </div>
-            </div>
-            <div class="uk-margin">
-                <div class="uk-inline">
-                    <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
-                    <label for="password"></label>
-                    <input class="uk-input" id="password" type="password" name="password_user"
-                           value="<?= set_value('password_user') != NULL ? set_value('password_user') : '' ?>">
-                    <span id="missingPassword"
-                          class="error"><?= form_error('password_user') != null ? form_error('password_user') : '' ?></span>
+                <div class="uk-margin">
+                    <div class="uk-inline">
+                        <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+                        <label for="password"></label>
+                        <input class="uk-input" id="password" type="password" name="password_user"
+                               value="<?= set_value('password_user') != NULL ? set_value('password_user') : '' ?>">
+                        <span id="missingPassword"
+                              class="error"><?= form_error('password_user') != null ? form_error('password_user') : '' ?></span>
+                    </div>
                 </div>
             </div>
             <a href="#modal-group-2" class="" uk-toggle>Vous n'êtes pas encore inscrit? Venez par ici !!!</a>
         </div>
         <div class="uk-modal-footer uk-text-right">
             <button class="uk-button uk-button-default uk-modal-close" type="button">Annuler</button>
-            <button class="uk-button uk-button-default uk-modal-close" type="submit">Se connecter</button>
+            <input class="uk-button uk-button-default" type="submit" value="Se connecter">
         </div>
         <?php
         echo form_close()
@@ -227,16 +233,19 @@ $form_attributes = array('class' => 'uk-form-horizontal');
                           class="error"><?= form_error('passwordVerif_user') != null ? form_error('passwordVerif_user') : '' ?></span>
                 </div>
                 <div class="uk-margin">
-                    <span id="errorPassword" class="error"><?= form_error('passwordVerif_user') != null ? form_error('passwordVerif_user') : '' ?></span>
+                    <span id="errorPassword"
+                          class="error"><?= form_error('passwordVerif_user') != null ? form_error('passwordVerif_user') : '' ?></span>
                 </div>
                 <div class="uk-margin" uk-margin>
                     <span class="info">Au format .gif, .jpg, .jpeg, .pjpeg ou .png</span>
                     <div uk-form-custom="target: true">
                         <input type="file" name="extension" id="upload">
-                        <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" readonly id="addFile">
+                        <input class="uk-input uk-form-width-medium" type="text" placeholder="Select file" readonly
+                               id="addFile">
                     </div>
 
-                    <span class="error" id="errorFile"><?= form_error('extension') != null ? form_error('extension') : '' ?></span>
+                    <span class="error"
+                          id="errorFile"><?= form_error('extension') != null ? form_error('extension') : '' ?></span>
                 </div>
             </fieldset>
         </div>

@@ -21,11 +21,16 @@ h2.description {
 CSS navbar
  */
 .uk-section-primary {
-    background-color: #942a25;
+    background-color: #373C35;
 }
 .logo {
     width: 90px;
     height: auto;
+}
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
 }
 /**
 CSS card client
@@ -48,7 +53,29 @@ CSS card client
 /**
 CCS pagination
  */
-
 .pagination {
     margin-top: 30px;
+}
+/**
+CSS Modal connexion
+ */
+.uk-modal-dialog {
+    width: 400px;
+}
+.connection-align {
+    margin-left: 50px;
+}
+/**
+CSS page
+ */
+.title {
+    margin-top: 10px;
+    color: #f1f1f1;
+}
+
+/**
+CSS footer
+ */
+.footer {
+    height: 100px;
 }

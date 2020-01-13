@@ -4,7 +4,7 @@
 //instruction de sécurité empéchant l'accÃ¨s direct au fichier
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-// création de la classe Produits héritant des propriétés de la classe CI_Controller (important : nom de la classe avec premiÃ¨re lettre en majuscule, tout comme le fichier)
+// création de la classe Produits héritant des propriétés de la classe CI_Controller (important : nom de la classe avec première lettre en majuscule, tout comme le fichier)
 class Client extends CI_Controller {
 
     /**
@@ -24,12 +24,12 @@ class Client extends CI_Controller {
     public function if_client_exists()
     {
 //  $this->output->enable_profiler(TRUE)
-        // si il y a présnece du post login_user
+        // si il y a présence du post login_user
         if ($this->input->post('login_user'))
         {
             // définition des règles de validations
             $this->form_validation->set_rules('login_user', 'Pseudo', 'required|regex_match[/^[a-zA-Z\d\- éèêëàâäùüûôöîï#$@]+$/]|is_unique[user.login_user]', array('required' => 'Le champs "Pseudo" n\'est pas renseigné', 'regex_match' => 'Champs "Pseudo" non valide', 'is_unique' => 'Ce pseudo est déjà utilisé.'));
-            // si la validation du formualire retourne FALSE
+            // si la validation du formualaire retourne FALSE
             if ($this->form_validation->run() === FALSE)
             {
                 // stockage d'un message d'erreur dans une variable et affichage de cette variable
@@ -219,7 +219,7 @@ class Client extends CI_Controller {
                         );
                         $this->session->set_userdata($session_user);
                         // redireciton vers l'accueil
-                        redirect(site_url('Produits/home_user'));
+                        redirect(site_url('Produits/index'));
                     } else {
                         $this->load->view('header');
                         echo "<div class=\"chip\">
@@ -379,7 +379,7 @@ class Client extends CI_Controller {
 // suppresion des variables de session
         $this->session->unset_userdata($session_user);
 // redirection vers la page d'accueil du sitem
-        redirect(site_url('Produits/home_user'));
+        redirect(site_url('Produits/index'));
     }
 
     /**
