@@ -266,7 +266,7 @@ class Produits extends CI_Controller
             // appel de la méthode "liste()" du model précédemment chargé
             $categoriesList = $this->Cat_model->categoriesList();
 
-            // ajout des résultats de la requÃ¨te dans le tableau des variables Ã  transmettre Ã  la vue
+            // ajout des résultats de la requête dans le tableau des variables Ã  transmettre Ã  la vue
 
             $productByIdView['categoriesList'] = $categoriesList;
             // chargement des vues
@@ -281,7 +281,7 @@ class Produits extends CI_Controller
      */
     public function delete($id)
     {
-        $this->output->enable_profiler(TRUE);
+       // $this->output->enable_profiler(TRUE);
 // appel de l'helper pour la gestion des urls
         $this->load->helper('url');
 // chargement du model Prod_model
@@ -289,7 +289,7 @@ class Produits extends CI_Controller
 // appel de la méthode delete
         $this->Prod_model->delete($id);
 // redirection vers la liste de produit
-//redirect('produits/liste');
+        redirect('Produits/index');
     }
 
     public function sendMail()

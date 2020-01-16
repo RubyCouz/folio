@@ -59,7 +59,7 @@ CCS pagination
 /**
 CSS Modal connexion
  */
-.uk-modal-dialog {
+.connect_modal {
     width: 400px;
 }
 .connection-align {
@@ -72,10 +72,25 @@ CSS page
     margin-top: 10px;
     color: #f1f1f1;
 }
+.white-text {
+    color: #f1f1f1;
+}
 
 /**
 CSS footer
  */
 .footer {
     height: 100px;
+}
+/*
+CSS card-detail
+ */
+.detail-card {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.detail-pic {
+    width: 100%!important;
+    height: auto!important;
+    margin-left: 20px;
 }
