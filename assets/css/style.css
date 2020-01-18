@@ -35,10 +35,6 @@ CSS navbar
 /**
 CSS card client
  */
-.cardMargin {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
 .pic {
     width: 100%!important;
     height: auto!important;
@@ -75,6 +71,15 @@ CSS page
 .white-text {
     color: #f1f1f1;
 }
+.mt-2 {
+    margin-top: 20px;
+}
+.ml-0 {
+    margin-left: 0px;
+}
+.uk-placeholder {
+    width: 100%!important;
+}
 
 /**
 CSS footer
@@ -93,4 +98,13 @@ CSS card-detail
     width: 100%!important;
     height: auto!important;
     margin-left: 20px;
+}
+/**
+CSS button
+ */
+.uk-button-success {
+    background-color: #8cc657;
+}
+.uk-button {
+    border-radius: 20px;
 }

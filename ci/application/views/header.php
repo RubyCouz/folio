@@ -95,7 +95,7 @@ $form_attributes = array('class' => 'uk-form-horizontal');
                             <?php
                         } else {
                             ?>
-                            <li><a class="" href="#signin" uk-toggle>Inscription/Connexion</a></li>
+                            <li><a class="" href="#signin" uk-toggle>Connexion</a></li>
                             <?php
                         }
                         if ($url != 'http://localhost./ci/index.php/Produits/cart') {

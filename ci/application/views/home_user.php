@@ -104,27 +104,12 @@
         ?>
             </tbody>
         </table>
-
-
-        <table class="uk-table uk-table-justify">
-            <thead>
-            <tr>
-
-            </tr>
-            </thead>
-            <tbody>
-
-
-
-            </tbody>
-        </table>
         <div class="pagination">
             <ul class="uk-pagination uk-flex-center" uk-margin>
                 <!-- pagination -->
                 <?php echo $this->pagination->create_links(); ?>
             </ul>
         </div>
-
         <div class="row">
             <div class="col s12">
                 <a href="<?= site_url('Produits/addProduct') ?>" class="uk-button uk-button-primary"
