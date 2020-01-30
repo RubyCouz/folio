@@ -1,4 +1,9 @@
 <div class="uk-container">
+    <?php
+    if($this->input->post()) {
+    var_dump($this->upload->data());
+    }
+     ?>
     <h1 class="white-text">Formulaire d'inscription</h1>
     <?= form_open_multipart('Client/check_userform'); ?>
     <fieldset>
@@ -59,7 +64,7 @@
             <div class="uk-margin">
                 <label class="uk-form-label white-text" for="passwordVerif">Vérification du mot de passe :</label>
                 <div class="uk-form-controls uk-form-controls-text">
-                    <input type="password" class="uk-input" id="passwordVerif" name="password_user"
+                    <input type="password" class="uk-input" id="passwordVerif" name="passwordVerif_user"
                            value="<?= set_value('passwordVerif_user') != NULL ? set_value('passwordVerif_user') : '' ?>">
                 </div>
                 <span id="missingPassword1"
@@ -70,13 +75,9 @@
               class="error"><?= form_error('passwordVerif_user') != null ? form_error('passwordVerif_user') : '' ?></span>
 
         <div class="ml-0" uk-grid>
-            <div class="js-upload uk-placeholder uk-text-center">
-                <span class="white-text" uk-icon="icon: cloud-upload"></span>
-                <span class="uk-text-middle white-text">Ajouter une photo de profil en la glissant ici ou</span>
-                <div uk-form-custom>
-                    <input type="file">
-                    <a href="" class="uk-link" title="Sélectionnez une photo de profil">sélectionnez en une en cliquant ici</a>
-                </div>
+            <div class="js-upload" uk-form-custom>
+                <input type="file" name="extension" multiple>
+                <button class="uk-button uk-button-default white-text" type="button" tabindex="-1">Sélectionner une photo de profil</button>
             </div>
             <progress id="js-progressbar" class="uk-progress" value="0" max="100" hidden></progress>
         </div>

@@ -3,36 +3,59 @@
     <words>
       <w>accueil</w>
       <w>administrateur</w>
+      <w>adresse</w>
       <w>affichage</w>
+      <w>afficher</w>
       <w>afpa</w>
       <w>ajout</w>
       <w>ajouter</w>
+      <w>ajoutée</w>
       <w>annuler</w>
       <w>appel</w>
+      <w>associatif</w>
+      <w>autorisés</w>
+      <w>avant</w>
       <w>avec</w>
+      <w>basepath</w>
       <w>bien</w>
       <w>bloqué</w>
+      <w>bonjour</w>
       <w>catégorie</w>
+      <w>ceci</w>
       <w>cette</w>
+      <w>ceux</w>
       <w>chargement</w>
+      <w>chemin</w>
       <w>classe</w>
       <w>cliquant</w>
       <w>codeigniter</w>
       <w>comme</w>
+      <w>compte</w>
       <w>confirmer</w>
       <w>connecter</w>
+      <w>contrôle</w>
       <w>couleur</w>
+      <w>courrante</w>
       <w>création</w>
       <w>depuis</w>
+      <w>données</w>
       <w>déconnecter</w>
+      <w>déconnection</w>
+      <w>définies</w>
       <w>définition</w>
+      <w>définitions</w>
       <w>démo</w>
       <w>démos</w>
       <w>détail</w>
       <w>effacer</w>
       <w>empéchant</w>
+      <w>enregistré</w>
+      <w>envoie</w>
+      <w>envoyé</w>
+      <w>erreurs</w>
       <w>etes</w>
       <w>exercices</w>
+      <w>faites</w>
       <w>fichier</w>
       <w>firstname</w>
       <w>formulaire</w>
@@ -44,8 +67,12 @@
       <w>icône</w>
       <w>igniter</w>
       <w>informations</w>
+      <w>inscript</w>
+      <w>inscrire</w>
       <w>inscrit</w>
+      <w>instanciation</w>
       <w>irréversible</w>
+      <w>jamais</w>
       <w>jsdelivr</w>
       <w>kenburns</w>
       <w>lastname</w>
@@ -53,31 +80,52 @@
       <w>libellé</w>
       <w>linkedin</w>
       <w>liste</w>
+      <w>lors</w>
       <w>majuscule</w>
+      <w>mettons</w>
       <w>modif</w>
+      <w>modifiant</w>
+      <w>monde</w>
       <w>méthode</w>
       <w>navbar</w>
       <w>numérique</w>
       <w>panier</w>
+      <w>paramêtre</w>
+      <w>passant</w>
+      <w>permettant</w>
       <w>pourrez</w>
       <w>première</w>
       <w>prix</w>
+      <w>problème</w>
       <w>produit</w>
       <w>produits</w>
       <w>profil</w>
       <w>projet</w>
       <w>propriétés</w>
+      <w>préalable</w>
       <w>prénom</w>
       <w>présence</w>
+      <w>redireciton</w>
+      <w>renommage</w>
+      <w>renseigné</w>
+      <w>requète</w>
       <w>retour</w>
+      <w>retourne</w>
       <w>retrouver</w>
       <w>règles</w>
+      <w>récupération</w>
       <w>référence</w>
+      <w>résoudre</w>
+      <w>résultat</w>
+      <w>résultats</w>
       <w>sera</w>
       <w>signin</w>
       <w>slideshow</w>
+      <w>stockage</w>
+      <w>succès</w>
       <w>supprimer</w>
       <w>sécurité</w>
+      <w>sélectionner</w>
       <w>sélectionnez</w>
       <w>tkaix</w>
       <w>uikit</w>
@@ -85,13 +133,20 @@
       <w>userform</w>
       <w>utilisateurs</w>
       <w>vais</w>
+      <w>valide</w>
       <w>venez</w>
       <w>verif</w>
       <w>vers</w>
+      <w>veuillez</w>
+      <w>visite</w>
+      <w>voici</w>
       <w>votre</w>
       <w>vouloir</w>
       <w>vous</w>
+      <w>vrai</w>
+      <w>vues</w>
       <w>vérification</w>
+      <w>être</w>
     </words>
   </dictionary>
 </component>

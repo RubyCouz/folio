@@ -48,7 +48,7 @@ class Client extends CI_Controller {
         // à l'envoie des données
         if ($this->input->post())
         {
-            // défnition des règles de validation
+            // définition des règles de validation
             $this->form_validation->set_rules('firstname_user', 'Prénom', 'required|regex_match[/^[a-zA-Z\-éèêëàâäùüûôöîï]+$/]', array('required' => 'Le champs "Prénom" n\'est pas renseigné', 'regex_match' => 'Champs "Prénom" non valide'));
             $this->form_validation->set_rules('lastname_user', 'Nom', 'required|regex_match[/^[a-zA-Z\-éèêëàâäùüûôöîï]+$/]', array('required' => 'Le champs "Nom" n\'est pas renseigné', 'regex_match' => 'Champs "Nom" non valide'));
             $this->form_validation->set_rules('login_user', 'Pseudo', 'required|regex_match[/^[a-zA-Z\d\- éèêëàâäùüûôöîï#$@]+$/]|is_unique[user.login_user]', array('required' => 'Le champs "Pseudo" n\'est pas renseigné', 'regex_match' => 'Champs "Pseudo" non valide', 'is_unique' => 'Ce pseudo est déjà utilisé.'));
@@ -218,7 +218,7 @@ class Client extends CI_Controller {
                             'extension' => $user_info->extension,
                         );
                         $this->session->set_userdata($session_user);
-                        // redireciton vers l'accueil
+                        // redirection vers l'accueil
                         redirect(site_url('Produits/index'));
                     } else {
                         $this->load->view('header');
@@ -251,6 +251,7 @@ class Client extends CI_Controller {
 
     /**
      * affichage des infos utilisateurs interfaces client
+     * @param $id
      */
     public function user_profil($id)
     {
@@ -267,7 +268,7 @@ class Client extends CI_Controller {
 
     /**
      * Contrôle du formulaire de modification d'info user
-     * 
+     * @param $id
      */
     public function update_profil($id)
     {
@@ -324,7 +325,7 @@ class Client extends CI_Controller {
         }
         else
         {
-            // instanciation de la clsse User_model
+            // instanciation de la classe User_model
             $this->load->model('User_model');
             // appel de la méthode get_user_by_id
             $user = $this->User_model->get_user_by_id($id);
@@ -345,16 +346,17 @@ class Client extends CI_Controller {
         $this->load->model('User_model');
         // appel de la méthode get_all_user
         $result_list = $this->User_model->get_all_users();
-        // écupération des résulats de la requète et stockage de ceux-ci dans un tableau
+        // récupération des résultats de la requète et stockage de ceux-ci dans un tableau
         $list['list'] = $result_list->result();
-// chargment des vues
+// chargement des vues
         $this->load->view('header');
         $this->load->view('list_user', $list);
         $this->load->view('footer');
     }
 
     /**
-     * affichage user par id (admin) 
+     * affichage user par id (admin)
+     * @param $id
      */
     public function user_detail($id)
     {
@@ -370,20 +372,21 @@ class Client extends CI_Controller {
     }
 
     /**
-     * deconnection
+     * déconnection
      */
     public function sign_out()
     {
-// récupération des varibles de sessions dans un tableau
+// récupération des variables de sessions dans un tableau
         $session_user = array('id', 'firstname', 'lastname', 'login', 'mail', 'role');
-// suppresion des variables de session
+// suppression des variables de session
         $this->session->unset_userdata($session_user);
-// redirection vers la page d'accueil du sitem
+// redirection vers la page d'accueil
         redirect(site_url('Produits/index'));
     }
 
     /**
      * méthode de suppression d'utilisateur
+     * @param $id
      */
     public function delete($id)
     {
